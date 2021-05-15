@@ -20,7 +20,7 @@
 			return clone;
 		}
 
-		function getValues(obj, separator) {
+		function getValues(obj, separator = ',') {
 			var result = '';
 			for (var key in obj) {
 				result += obj[key] + separator + ' ';
@@ -28,7 +28,7 @@
 			return result;
 		}
 
-		function getKeys(obj, separator) {
+		function getKeys(obj, separator = ',') {
 			var result = '';
 			for (var key in obj) {
 				result += key + separator + ' ';
@@ -45,8 +45,8 @@
 		}
 
 		console.log(cloneObj(user));
-		console.log(getValues(user, ','));
-		console.log(getKeys(user, ','));
+		console.log(getValues(user, '.'));
+		console.log(getKeys(user, '.'));
 		console.log(getEntries(user));
 	</script>
 </body>
